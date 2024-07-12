@@ -32,7 +32,7 @@ Welcome to the Instagram Clone App! This project is a mobile application designe
 
 ![](https://raw.githubusercontent.com/OshandaB/instagram-clone-app/master/assets/images/IMG_3217.png)
 
-
+![](https://raw.githubusercontent.com/OshandaB/instagram-clone-app/master/assets/images/IMG_3221.png)
 
 ![](https://raw.githubusercontent.com/OshandaB/instagram-clone-app/master/assets/images/IMG_3219.png)
 
