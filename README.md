@@ -1,50 +1,51 @@
-# Welcome to your Expo app 👋
+## Instagram Clone App
+Welcome to the Instagram Clone App! This project is a mobile application designed to replicate the core features of Instagram using React Native.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 🚀 Features
 
-## Get started
+- User Authentication: Sign up, log in, and log out functionality.
 
-1. Install dependencies
+- Photo Upload: Post photos with captions.
+- Feed: View a feed of photos from followed users.
 
-   ```bash
-   npm install
-   ```
+- User Profiles: View and edit user profiles.
 
-2. Start the app
+- Likes and Comments: Like and comment on photos.
 
-   ```bash
-    npx expo start
-   ```
+- Follow System: Follow and unfollow other users.
 
-In the output, you'll find options to open the app in a
+- Notifications: Get notified about likes, comments, and follows.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+## 🛠 Tech Stack
+- React Native
+- Redux (for state management)
+- Firebase (for backend services)
+- React Navigation (for app navigation)
+- Expo (for development and build)
 
-When you're ready, run:
 
-```bash
-npm run reset-project
-```
+## Screenshots
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+![](https://raw.githubusercontent.com/OshandaB/instagram-clone-app/master/assets/images/IMG_3216.png)
 
-## Learn more
+![](https://raw.githubusercontent.com/OshandaB/instagram-clone-app/master/assets/images/IMG_3217.png)
 
-To learn more about developing your project with Expo, look at the following resources:
+![](https://raw.githubusercontent.com/OshandaB/instagram-clone-app/master/assets/images/IMG_3218.png)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+![](https://raw.githubusercontent.com/OshandaB/instagram-clone-app/master/assets/images/IMG_3219.png)
 
-## Join the community
 
-Join our community of developers creating universal apps.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+![](https://raw.githubusercontent.com/OshandaB/instagram-clone-app/master/assets/images/IMG_3220.png)
+
+
+
+
+
+## 🤝 Contributing
+Contributions are welcome! If you'd like to contribute, please fork the repository and submit a pull request. Let's build something great together!
+
+## 📄 License
+This project is licensed under the MIT License. Feel free to use it as you like!
