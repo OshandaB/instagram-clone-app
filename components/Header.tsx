@@ -1,8 +1,12 @@
 import React from 'react';
 import { Text, View, StatusBar, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons'; 
+import { useFonts } from 'expo-font';
 
 export default function Header() {
+  const [loaded, error] = useFonts({
+    'Lobster-Regular': require('../assets/fonts/Lobster-Regular.ttf'),
+  })
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="white" barStyle="dark-content" animated={true}/>
@@ -48,7 +52,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Lobster-Regular',
     fontSize: 28,
     fontWeight: '500',
-    color: 'black', // Using the theme color
+    color: 'black', 
   },
   icons: {
     flexDirection: 'row',

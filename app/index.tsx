@@ -7,9 +7,9 @@ import SearchScreen from '@/screens/search-screen';
 export default function index() {
   return (
     <View style={{backgroundColor:'white',flex:1}} >
-        <LoadingScreen/>
+        {/* <LoadingScreen/> */}
         {/* <LoginScreen/> */}
-{/* <HomeScreen/> */}
+<HomeScreen/>
 {/* <SearchScreen/> */}
 
     </View>
