@@ -11,18 +11,18 @@ export default function Story() {
     },
     {
       id: 0,
-      name: 'Ram_Charan',
-      image: require('../assets/images/profile1.jpg'),
+      name: 'Kaveen Sandepa',
+      image: require('../assets/images/kaveen.jpeg'),
     },
     {
       id: 0,
-      name: 'Tom',
+      name: 'Duvindu Thathsara',
+      image: require('../assets/images/isuru.jpg'),
+    },
+    {
+      id: 0,
+      name: 'Isuru Lakshan',
       image: require('../assets/images/profile2.jpg'),
-    },
-    {
-      id: 0,
-      name: 'Ram_Charan',
-      image: require('../assets/images/profile1.jpg'),
     },
     {
       id: 0,
