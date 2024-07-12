@@ -5,10 +5,14 @@ export default function LoadingScreen() {
   return (
     <View style={styles.container}>
       <Image 
-        source={require('../assets/images/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand.png')} 
+        source={require('../assets/images/logo.png')} 
         style={styles.logo} 
       />
-      <Text style={styles.loadingText}>Loading Instagram</Text>
+      {/* <Text style={styles.loadingText}>from Meta</Text> */}
+      <Image 
+        source={require('../assets/images/metalogo.png')} 
+        style={styles.fromMetaLogo} 
+      />
       <ActivityIndicator size="large" color="#3897f0" />
     </View>
   );
@@ -26,10 +30,19 @@ const styles = StyleSheet.create({
     height: 100,
     marginBottom: 20,
   },
-  loadingText: {
-    fontSize: 20,
-    fontWeight: 'bold',
+  fromMetaLogo: {
+    
+    position:'absolute',
+    bottom:0,
+    width: 80,
+    height: 80,
     marginBottom: 20,
-    color: '#3897f0',
+  },
+  loadingText: {
+    paddingBottom:20,
+    position:'absolute',
+    bottom:0,
+    fontSize: 16,
+    color: '#aaa',
   },
 });

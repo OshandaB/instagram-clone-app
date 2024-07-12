@@ -2,11 +2,16 @@ import React from 'react';
 import { Text, View, StyleSheet, Image, ActivityIndicator } from 'react-native';
 import LoadingScreen from '@/screens/loading-screen';
 import LoginScreen from '@/screens/login-screen';
-export default function HomeScreen() {
+import HomeScreen from '@/screens/home-screen';
+import SearchScreen from '@/screens/search-screen';
+export default function index() {
   return (
-    <View style={styles.container}>
-        {/* <LoadingScreen/> */}
-        <LoginScreen/>
+    <View style={{backgroundColor:'white',flex:1}} >
+        <LoadingScreen/>
+        {/* <LoginScreen/> */}
+{/* <HomeScreen/> */}
+{/* <SearchScreen/> */}
+
     </View>
   );
 }

@@ -8,29 +8,28 @@ export default function LoginScreen() {
 
   const handleLogin = () => {
     setLoading(true);
-    // Add your login logic here
+  
     setTimeout(() => {
       setLoading(false);
-      // Navigate to the next screen or show an error
     }, 2000);
   };
 
   return (
     <View style={styles.container}>
       <Image 
-        source={require('../assets/images/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand.png')} 
+        source={require('../assets/images/logo.png')} 
         style={styles.logo} 
       />
       {loading ? (
         <>
-          <Text style={styles.loadingText}>Loading Instagram</Text>
+          {/* <Text style={styles.loadingText}>Loading Instagram</Text> */}
           <ActivityIndicator size="large" color="#3897f0" />
         </>
       ) : (
         <>
           <TextInput
             style={styles.input}
-            placeholder="Phone number, username or email address"
+            placeholder="Username, email or mobile number"
             value={username}
             onChangeText={setUsername}
           />
@@ -42,16 +41,23 @@ export default function LoginScreen() {
             onChangeText={setPassword}
           />
           <TouchableOpacity onPress={handleLogin} style={styles.button}>
-            <Text style={styles.buttonText}>Log In</Text>
+            <Text style={styles.buttonText}>Log in</Text>
           </TouchableOpacity>
-          <Text style={styles.forgotPassword}>Forgotten password?</Text>
-          <Text style={styles.or}>OR</Text>
-          <TouchableOpacity style={styles.facebookButton}>
-            <Text style={styles.facebookButtonText}>Log in with Facebook</Text>
+          <TouchableOpacity>
+            <Text style={styles.forgotPassword}>Find your account</Text>
           </TouchableOpacity>
-          <Text style={styles.signUp}>Don’t have an account? Sign Up</Text>
+          <TouchableOpacity style={styles.createAccountButton}>
+            <Text style={styles.createAccountButtonText}>Create new account</Text>
+          </TouchableOpacity>
+          <Text style={styles.fromMeta}>from Meta</Text>
+          <Image 
+        source={require('../assets/images/metalogo.png')} 
+        style={styles.fromMetaLogo} 
+      />
+
         </>
       )}
+      
     </View>
   );
 }
@@ -61,24 +67,33 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#FAFAFA',
   },
   logo: {
-    width: 100,
-    height: 100,
+    width: 80,
+    height: 80,
+    marginBottom: 20,
+  },
+  fromMetaLogo: {
+    
+    position:'absolute',
+    bottom:0,
+    width: 80,
+    height: 80,
     marginBottom: 20,
   },
   input: {
-    width: '80%',
+    width: 300,
     height: 40,
-    borderColor: '#ccc',
+    borderColor: '#DBDBDB',
     borderWidth: 1,
     borderRadius: 5,
     marginBottom: 10,
     paddingHorizontal: 10,
+    backgroundColor: '#FFFFFF',
   },
   button: {
-    width: '100%',
+    width: 300,
     height: 40,
     backgroundColor: '#3897f0',
     justifyContent: 'center',
@@ -93,29 +108,31 @@ const styles = StyleSheet.create({
   },
   forgotPassword: {
     color: '#3897f0',
-    marginBottom: 10,
+    marginBottom: 20,
+    fontSize: 14,
   },
-  or: {
-    marginVertical: 10,
-    color: '#aaa',
-  },
-  facebookButton: {
-    width: '80%',
+  createAccountButton: {
+    width: 300,
     height: 40,
-    backgroundColor: '#4267B2',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 5,
-    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: '#3897f0',
+    marginTop: 20,
   },
-  facebookButtonText: {
-    color: 'white',
+  createAccountButtonText: {
+    color: '#3897f0',
     fontSize: 16,
     fontWeight: 'bold',
   },
-  signUp: {
+  fromMeta: {
+    paddingBottom:100,
+   position:'absolute',
+   bottom:0,
     color: '#aaa',
     marginTop: 20,
+    fontSize: 14,
   },
   loadingText: {
     fontSize: 20,
