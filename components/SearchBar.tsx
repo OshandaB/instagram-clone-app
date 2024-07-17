@@ -20,7 +20,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#EBEBEB',
         borderRadius: 10,
-        margin: 10,
+        marginTop:40,
+        marginLeft:10,
+        marginRight:10,
         padding: 10,
         height:50
       },
