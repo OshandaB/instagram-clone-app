@@ -1,27 +1,32 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
+import { useNavigation, DrawerActions } from '@react-navigation/native';
+import type { DrawerNavigationProp } from '@react-navigation/drawer';
+import { router } from 'expo-router';
 
-export default function ProfileScreen() {
+
+
+
+const ProfileScreen = () => {
+
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.safeArea}>
       <ScrollView style={styles.container}>
         <View style={styles.topBar}>
+  
           <View style={styles.usernameContainer}>
             <Text style={styles.username}>oshanda_banuka_8</Text>
-            <Feather
-              name="chevron-down"
-              style={styles.chevronIcon}
-            />
+            <Feather name="chevron-down" style={styles.chevronIcon} />
           </View>
-          <Feather name="menu" style={styles.menuIcon} />
+          <TouchableOpacity onPress={()=>navigation.dispatch(DrawerActions.openDrawer())} >
+            <Feather name="menu" style={styles.menuIcon} />
+          </TouchableOpacity>
         </View>
 
         <View style={styles.header}>
-          <Image
-            source={require('../../assets/images/image.png')} 
-            style={styles.profileImage}
-          />
+          <Image source={require('../../../assets/images/image.png')} style={styles.profileImage} />
           <View style={styles.statsContainer}>
             <View style={styles.statItem}>
               <Text style={styles.statNumber}>0</Text>
@@ -59,41 +64,39 @@ export default function ProfileScreen() {
             <Text style={styles.buttonText}>Share profile</Text>
           </TouchableOpacity>
         </View>
- <ScrollView   horizontal={true}
-      showsHorizontalScrollIndicator={false} style={{paddingVertical:10}}>
- <View style={styles.highlightsContainer}>
-          
-          <View style={styles.highlightItem}>
-            <Text style={styles.highlightText}>K</Text>
-            <Text style={styles.highlightLabel}>Highlights</Text>
+
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{ paddingVertical: 10 }}>
+          <View style={styles.highlightsContainer}>
+            <View style={styles.highlightItem}>
+              <Text style={styles.highlightText}>K</Text>
+              <Text style={styles.highlightLabel}>Highlights</Text>
+            </View>
+            <View style={styles.highlightItem}>
+              <Text style={styles.highlightText}>E</Text>
+              <Text style={styles.highlightLabel}>Highlights</Text>
+            </View>
+            <View style={styles.highlightItem}>
+              <Text style={styles.highlightText}>V</Text>
+              <Text style={styles.highlightLabel}>Highlights</Text>
+            </View>
+            <View style={styles.highlightItem}>
+              <Text style={styles.highlightText}>I</Text>
+              <Text style={styles.highlightLabel}>Highlights</Text>
+            </View>
+            <View style={styles.highlightItem}>
+              <Text style={styles.highlightText}>V</Text>
+              <Text style={styles.highlightLabel}>Highlights</Text>
+            </View>
+            <View style={styles.highlightItem}>
+              <Text style={styles.highlightText}>I</Text>
+              <Text style={styles.highlightLabel}>Highlights</Text>
+            </View>
           </View>
-          <View style={styles.highlightItem}>
-            <Text style={styles.highlightText}>E</Text>
-            <Text style={styles.highlightLabel}>Highlights</Text>
-          </View>
-          <View style={styles.highlightItem}>
-            <Text style={styles.highlightText}>V</Text>
-            <Text style={styles.highlightLabel}>Highlights</Text>
-          </View>
-          <View style={styles.highlightItem}>
-            <Text style={styles.highlightText}>I</Text>
-            <Text style={styles.highlightLabel}>Highlights</Text>
-          </View>
-          <View style={styles.highlightItem}>
-            <Text style={styles.highlightText}>V</Text>
-            <Text style={styles.highlightLabel}>Highlights</Text>
-          </View>
-          <View style={styles.highlightItem}>
-            <Text style={styles.highlightText}>I</Text>
-            <Text style={styles.highlightLabel}>Highlights</Text>
-          </View>
-        </View>
- </ScrollView>
-    
+        </ScrollView>
       </ScrollView>
     </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   safeArea: {
@@ -173,16 +176,15 @@ const styles = StyleSheet.create({
     padding: 15,
     margin: 20,
     borderRadius: 5,
-    
   },
   dashboardText: {
     fontSize: 16,
     color: 'black',
-    fontWeight:'600'
+    fontWeight: '600',
   },
   dashboardSubtext: {
     fontSize: 12,
-    color: '#black',
+    color: 'black',
     marginTop: 5,
   },
   buttonsContainer: {
@@ -191,8 +193,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   button: {
-   
-   backgroundColor:'#EEEDEB',
+    backgroundColor: '#EEEDEB',
     borderRadius: 5,
     paddingVertical: 5,
     paddingHorizontal: 10,
@@ -202,7 +203,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: 'black',
-    fontWeight:'600'
+    fontWeight: '600',
   },
   highlightsContainer: {
     flexDirection: 'row',
@@ -212,26 +213,26 @@ const styles = StyleSheet.create({
   },
   highlightItem: {
     alignItems: 'center',
-    paddingRight:10
+    paddingRight: 10,
   },
   highlightText: {
-    
     width: 50,
     height: 50,
     borderRadius: 100,
     backgroundColor: '#333',
     color: '#fff',
     textAlign: 'center',
-    lineHeight:50,
+    lineHeight: 50,
     fontSize: 24,
-    fontStyle:'italic',
+    fontStyle: 'italic',
     fontWeight: 'bold',
   },
   highlightLabel: {
-    fontStyle:'italic',
-    // fontWeight:'bold',
+    fontStyle: 'italic',
     color: 'black',
     marginTop: 5,
     fontSize: 12,
   },
 });
+
+export default ProfileScreen;
